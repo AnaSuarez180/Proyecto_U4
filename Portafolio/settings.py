@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic', 
     'myapp',
 ]
 
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'Portafolio.urls'
@@ -138,7 +140,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'C:\\Users\\sofia\\Desktop\\SILABUZ CLASES\\SEMANA 7\\PROYECTO1\\Portafolio\\myapp\\templates\\css')]
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'C:\\Users\\sofia\\Desktop\\SILABUZ CLASES\\SEMANA 7\\PROYECTO1\\Portafolio\\myapp\\templates\\css')]
 STATIC_URL = '/templates/css/'
 DEBUG = True
 
