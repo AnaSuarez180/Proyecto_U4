@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'myapp',
 ]
 
+CRF_TRUSTED_ORIGINS = ['https://template-django-production-6e65.up.railway.app']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
