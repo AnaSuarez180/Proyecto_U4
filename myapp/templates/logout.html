@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Log Out</title>
+{% endblock %}
+
+{% block javascript %}
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+{% endblock %}
+
+
+{% block style %}
+{% load static %}
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Cerraste sesión.</h1>
+    <h5><a href="{% url 'login' %}">Volver al Log In</a></h5>
+</div>
+
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+
+<head>
+    {% block title %}
+    <title>Sign In</title>
+    {% endblock %}
+    {% block style %}
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" media="all" />
+    {% endblock %}
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- //web font -->
+
+
+</head>
+<body>
+    {% block content %}
+    <div class="main-w3layouts wrapper">
+			<h1>Sign In</h1>
+			<div class="main-agileinfo">
+				<div class="agileits-top">
+                    <form action="" method="post">
+                        {% csrf_token %}
+
+                        <!-- Name input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example0">{{ login_form.name.label_tag }}</label>
+                            {{ login_form.name }}
+                        </div>
+
+                        <!-- Last name input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example0">{{ login_form.last_name.label_tag }}</label>
+                            {{ login_form.last_name }}
+                        </div>
+
+
+                        <!-- Username input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example0">{{ login_form.username.label_tag }}</label>
+                            {{ login_form.username }}
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            
+                            <label class="form-label" for="form2Example1">{{ login_form.email.label_tag }}</label>
+                            {{ login_form.email }}
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example2">{{ login_form.password.label_tag }}</label>
+                            {{ login_form.password }}
+                        </div>
+
+                        <div>
+                            <div class="container">
+                                {% if messages %}
+                                    {% for message in messages %}
+                                        <div class="alert alert-{{message.tags}}">{{message}}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">Register</button>
+
+    {% endblock content %}
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
