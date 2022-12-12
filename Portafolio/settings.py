@@ -75,17 +75,19 @@ WSGI_APPLICATION = 'Portafolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'portafolio1',
+        'NAME': 'railway',
         'USER': 'root',
         # DO NOT PUSH TO REPOSITORY
-        'PASSWORD': 'suarez18',
+        'PASSWORD': 'd95hA98XnHlD3UEqqA5r',
         # DO NOT PUSH TO REPOSITORY
-        'HOST': 'localhost',
+        'HOST': 'containers-us-west-170.railway.app',
         # DO NOT PUSH TO REPOSITORY
-        'PORT': '3306'
+        'PORT': '5479'
     }
 }
 
